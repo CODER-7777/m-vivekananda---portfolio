@@ -151,37 +151,59 @@ export const PORTFOLIO_DATA: ProfileData = {
     { name: "Content Creation Internship – Set2Score", link: "https://drive.google.com/drive/u/0/" }
   ],
   artwork: [
+    // --- PLACEHOLDER 1 ---
     {
       id: "art-1",
-      title: "Futuristic City Render",
-      type: "image",
-      url: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=1000&auto=format&fit=crop",
-      thumbnail: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=400&auto=format&fit=crop",
-      description: "A cyberpunk city concept created in Blender using procedural textures."
+      title: "Security Drone",
+      type: "video", // or "image"
+      url: "/artworks/video1.mp4", // Put file in public/artworks/video1.mp4
+      thumbnail: "/artworks/thumb1.png", // Optional: Put thumbnail in public/artworks/
+      description: "A Futuristic Autonomous Security Drone"
     },
+    // --- PLACEHOLDER 2 ---
     {
       id: "art-2",
-      title: "Drone Mechanics Animation",
-      type: "image",
-      url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop",
-      thumbnail: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400&auto=format&fit=crop",
-      description: "Mechanical rigging and animation test for a quadcopter arm."
+      title: "Forest Low poly scene",
+      type: "video",
+      url: "/artworks/video2.mp4",
+      thumbnail: "/artworks/thumb2.png",
+      description: "Low poly style forest scene"
     },
+    // --- PLACEHOLDER 3 ---
     {
       id: "art-3",
-      title: "Fluid Simulation",
-      type: "image",
-      url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-      thumbnail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop",
-      description: "Abstract fluid dynamics simulation using Mantaflow."
+      title: "Artwork Title 3",
+      type: "video",
+      url: "/artworks/video3.mp4",
+      thumbnail: "/artworks/thumb3.jpg",
+      description: "Description for artwork 3"
     },
+    // --- PLACEHOLDER 4 ---
     {
       id: "art-4",
-      title: "My Local Animation",
+      title: "Artwork Title 4",
       type: "video",
-      url: "/artworks/my-video.mp4", // Place your video in public/artworks/my-video.mp4
-      thumbnail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop", // Optional thumbnail
-      description: "An example of a local video file."
+      url: "/artworks/video4.mp4",
+      thumbnail: "/artworks/thumb4.jpg",
+      description: "Description for artwork 4"
+    },
+    // --- PLACEHOLDER 5 ---
+    {
+      id: "art-5",
+      title: "Artwork Title 5",
+      type: "video",
+      url: "/artworks/video5.mp4",
+      thumbnail: "/artworks/thumb5.jpg",
+      description: "Description for artwork 5"
+    },
+    // --- PLACEHOLDER 6 ---
+    {
+      id: "art-6",
+      title: "Artwork Title 6",
+      type: "video",
+      url: "/artworks/video6.mp4",
+      thumbnail: "/artworks/thumb6.jpg",
+      description: "Description for artwork 6"
     }
   ]
 };
