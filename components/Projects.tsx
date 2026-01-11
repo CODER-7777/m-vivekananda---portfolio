@@ -5,13 +5,13 @@ import { PORTFOLIO_DATA } from '../constants';
 
 export const Projects: React.FC = () => {
   return (
-    <section className="py-24 bg-black">
+    <section className="py-12 bg-black">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-white mb-16 gradient-border-l pl-6"
+          className="text-4xl font-bold text-white mb-8 gradient-border-l pl-6"
         >
           Featured Projects
         </motion.h2>

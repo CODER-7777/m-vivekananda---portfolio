@@ -236,7 +236,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-lg md:text-xl text-gray-400 max-w-2xl mb-12 leading-relaxed"
+            className="text-lg md:text-xl text-gray-400 max-w-2xl mb-6 leading-relaxed"
           >
             {PORTFOLIO_DATA.about}
           </motion.p>
@@ -245,12 +245,12 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="flex gap-6 mb-16"
+            className="flex gap-6 mb-8"
           >
             {[
               { link: PORTFOLIO_DATA.socials.github, Icon: Github },
               { link: PORTFOLIO_DATA.socials.linkedin, Icon: Linkedin },
-              { link: `mailto:${PORTFOLIO_DATA.socials.email}`, Icon: Mail }
+              { link: `mailto:${Array.isArray(PORTFOLIO_DATA.socials.email) ? PORTFOLIO_DATA.socials.email[0] : PORTFOLIO_DATA.socials.email}`, Icon: Mail }
             ].map((social, i) => (
               <a
                 key={i}

@@ -5,7 +5,7 @@ import { Briefcase } from 'lucide-react';
 
 export const Timeline: React.FC = () => {
   return (
-    <section className="py-24 bg-[#050510] relative">
+    <section className="py-12 bg-[#050510] relative">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
@@ -28,20 +28,20 @@ export const Timeline: React.FC = () => {
             >
               {/* Icon Dot */}
               <div className="absolute left-[-20px] top-0 w-10 h-10 rounded-full bg-black border-2 border-cyan-500 flex items-center justify-center text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.5)] z-10">
-                  <Briefcase size={18} />
+                <Briefcase size={18} />
               </div>
-              
+
               <div className="glass-panel p-6 md:p-8 rounded-xl hover:bg-white/5 transition-colors border-l-4 border-l-cyan-500 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-10 transition-opacity">
-                    <Briefcase size={80} className="text-cyan-500" />
+                  <Briefcase size={80} className="text-cyan-500" />
                 </div>
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 relative z-10">
                   <div>
                     <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
                     <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                        <p className="text-cyan-400 text-lg font-medium">{exp.company}</p>
-                        {exp.location && <span className="text-gray-500 text-sm hidden md:block">• {exp.location}</span>}
+                      <p className="text-cyan-400 text-lg font-medium">{exp.company}</p>
+                      {exp.location && <span className="text-gray-500 text-sm hidden md:block">• {exp.location}</span>}
                     </div>
                   </div>
                   <span className="text-violet-400 bg-violet-500/10 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit border border-violet-500/20 font-mono">

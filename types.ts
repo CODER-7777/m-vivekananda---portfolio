@@ -69,7 +69,7 @@ export interface ProfileData {
   socials: {
     linkedin: string;
     github: string;
-    email: string;
+    email: string | string[];
     phone: string;
   };
 }

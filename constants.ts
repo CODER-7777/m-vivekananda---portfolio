@@ -8,8 +8,8 @@ export const PORTFOLIO_DATA: ProfileData = {
   socials: {
     linkedin: "https://www.linkedin.com/in/m-vivekananda-77b922284/",
     github: "https://github.com",
-    email: "vivekanandamansoju@gmail.com",
-    phone: "+91-833 383 1294"
+    email: ["vivekanandamansoju@gmail.com", "mvivek24@iitk.ac.in"],
+    phone: "+91 8333831294"
   },
   education: [
     {

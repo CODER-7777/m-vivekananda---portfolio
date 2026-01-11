@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Mail, Send, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { PORTFOLIO_DATA } from '../constants';
 
 export const Contact: React.FC = () => {
     return (
@@ -23,17 +24,29 @@ export const Contact: React.FC = () => {
                     </p>
 
                     <div className="space-y-6">
-                        <div className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors">
-                            <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                                <Mail className="w-5 h-5 text-pink-500" />
+                        {Array.isArray(PORTFOLIO_DATA.socials.email) ? (
+                            PORTFOLIO_DATA.socials.email.map((email) => (
+                                <div key={email} className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors">
+                                    <div className="p-3 bg-white/5 rounded-lg border border-white/10">
+                                        <Mail className="w-5 h-5 text-pink-500" />
+                                    </div>
+                                    <span>{email}</span>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors">
+                                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
+                                    <Mail className="w-5 h-5 text-pink-500" />
+                                </div>
+                                <span>{PORTFOLIO_DATA.socials.email}</span>
                             </div>
-                            <span>your.email@example.com</span>
-                        </div>
+                        )}
+
                         <div className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors">
                             <div className="p-3 bg-white/5 rounded-lg border border-white/10">
                                 <Phone className="w-5 h-5 text-purple-500" />
                             </div>
-                            <span>+91 98765 43210</span>
+                            <span>{PORTFOLIO_DATA.socials.phone}</span>
                         </div>
                         <div className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors">
                             <div className="p-3 bg-white/5 rounded-lg border border-white/10">

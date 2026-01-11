@@ -8,7 +8,7 @@ export const Skills: React.FC = () => {
     const categories = Array.from(new Set(PORTFOLIO_DATA.skills.map(s => s.category)));
 
     return (
-        <section className="py-24 bg-[#050510] relative overflow-hidden">
+        <section className="py-12 bg-[#050510] relative overflow-hidden">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-900/10 rounded-full blur-[100px] pointer-events-none" />
 
@@ -17,7 +17,7 @@ export const Skills: React.FC = () => {
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    className="text-4xl font-bold text-white mb-16 gradient-border-l pl-6"
+                    className="text-4xl font-bold text-white mb-8 gradient-border-l pl-6"
                 >
                     Technical Proficiency
                 </motion.h2>

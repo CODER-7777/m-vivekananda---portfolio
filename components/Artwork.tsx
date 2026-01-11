@@ -11,7 +11,7 @@ export const Artwork: React.FC = () => {
     const [selectedArtwork, setSelectedArtwork] = useState<typeof PORTFOLIO_DATA.artwork[0] | null>(null);
 
     return (
-        <section className="py-24 bg-black relative">
+        <section className="py-12 bg-black relative">
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-900/20 via-black to-black pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
@@ -19,7 +19,7 @@ export const Artwork: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-4 mb-16"
+                    className="flex items-center gap-4 mb-8"
                 >
                     <div className="w-12 h-12 bg-white rounded-xl overflow-hidden shadow-lg shadow-violet-500/20">
                         {/* Placeholder for Blender Icon - User to replace 'blender-icon.png' */}
