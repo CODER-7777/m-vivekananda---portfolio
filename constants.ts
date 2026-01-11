@@ -105,15 +105,18 @@ export const PORTFOLIO_DATA: ProfileData = {
   ],
   skills: [
     { name: "C", level: 90, category: "Languages" },
+    { name: "C++", level: 90, category: "Languages" },
     { name: "Python", level: 95, category: "Languages" },
     { name: "HTML/CSS", level: 85, category: "Languages" },
     { name: "LaTeX", level: 80, category: "Languages" },
     { name: "OpenCV", level: 85, category: "Frameworks/Libraries" },
-    { name: "NumPy & Pandas", level: 90, category: "Frameworks/Libraries" },
+    { name: "NumPy", level: 90, category: "Frameworks/Libraries" },
     { name: "Matplotlib", level: 85, category: "Frameworks/Libraries" },
     { name: "Manim", level: 95, category: "Frameworks/Libraries" },
     { name: "Scikit-learn", level: 80, category: "Frameworks/Libraries" },
     { name: "Blender", level: 75, category: "Software/Tools" },
+    { name: "AutoCAD", level: 85, category: "Software/Tools" },
+    { name: "AutoCAD Inventor", level: 85, category: "Software/Tools" },
     { name: "Autodesk Fusion 360", level: 85, category: "Software/Tools" },
     { name: "Docker & Git", level: 80, category: "Software/Tools" },
     { name: "Gazebo", level: 70, category: "Software/Tools" },
@@ -160,6 +163,7 @@ export const PORTFOLIO_DATA: ProfileData = {
       thumbnail: "/artworks/thumb1.png", // Optional: Put thumbnail in public/artworks/
       description: "A Futuristic Autonomous Security Drone"
     },
+    /*
     // --- PLACEHOLDER 2 ---
     {
       id: "art-2",
@@ -205,5 +209,6 @@ export const PORTFOLIO_DATA: ProfileData = {
       thumbnail: "/artworks/thumb6.jpg",
       description: "Description for artwork 6"
     }
+    */
   ]
 };

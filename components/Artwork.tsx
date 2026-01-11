@@ -4,6 +4,10 @@ import { PORTFOLIO_DATA } from '../constants';
 import { Play, Image as ImageIcon, Box, X } from 'lucide-react';
 
 export const Artwork: React.FC = () => {
+    if (!PORTFOLIO_DATA.artwork || PORTFOLIO_DATA.artwork.length === 0) {
+        return null;
+    }
+
     const [selectedArtwork, setSelectedArtwork] = useState<typeof PORTFOLIO_DATA.artwork[0] | null>(null);
 
     return (
@@ -66,18 +70,6 @@ export const Artwork: React.FC = () => {
                             )}
                         </motion.div>
                     ))}
-
-                    {/* Add New Placeholder */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                        className="aspect-video bg-zinc-900/30 rounded-xl border-2 border-dashed border-white/10 flex flex-col items-center justify-center text-gray-500 hover:border-cyan-500/50 hover:text-cyan-400 transition-colors group cursor-pointer"
-                    >
-                        <Box size={40} className="mb-4 opacity-50 group-hover:opacity-100 transition-opacity" />
-                        <span className="font-mono text-sm">Add more .mp4 / .blend</span>
-                    </motion.div>
                 </div>
             </div>
 

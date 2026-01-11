@@ -1,41 +1,40 @@
 import React from 'react';
-import { Hero } from './components/Hero';
-import { Timeline } from './components/Timeline';
-import { Education } from './components/Education';
-import { Projects } from './components/Projects';
-import { Skills } from './components/Skills';
-import { Leadership } from './components/Leadership';
-import { Artwork } from './components/Artwork';
-import { AIChat } from './components/AIChat';
-import { CustomCursor } from './components/CustomCursor';
-
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { BackgroundAnimation } from './components/BackgroundAnimation';
+import { CustomCursor } from './components/CustomCursor';
+import { AIChat } from './components/AIChat';
+import { Home } from './pages/Home';
+import { Blog } from './pages/Blog';
+import { Contact } from './pages/Contact';
 
 function App() {
   return (
-    <div className="bg-[#030014] min-h-screen text-white selection:bg-pink-500 selection:text-white cursor-none overflow-x-hidden relative">
-      <BackgroundAnimation />
-      <CustomCursor />
-      <Hero />
-      <Education />
-      <Timeline />
-      <Projects />
-      <Artwork />
-      <Skills />
-      <Leadership />
+    <BrowserRouter>
+      <div className="bg-[#050414] min-h-screen text-white selection:bg-pink-500 selection:text-white cursor-none overflow-x-hidden relative">
+        <BackgroundAnimation />
+        <CustomCursor />
 
-      {/* Footer */}
-      <footer className="py-12 bg-zinc-950 border-t border-white/10 text-center relative z-10">
-        <p className="text-gray-500">
-          © {new Date().getFullYear()} M Vivekananda. Built with React, Tailwind & Gemini API.
-        </p>
-        <p className="text-xs text-gray-700 mt-2">
-          Portfolio data based on Resume/CV.
-        </p>
-      </footer>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
-      <AIChat />
-    </div>
+        {/* Footer */}
+        <footer className="py-12 bg-[#02020a] border-t border-white/5 text-center relative z-10 mt-auto">
+          <div className="flex justify-center gap-8 mb-8 text-sm font-medium text-gray-400">
+            <Link to="/" className="hover:text-cyan-400 transition-colors">Home</Link>
+            <Link to="/blog" className="hover:text-pink-400 transition-colors">Blog</Link>
+            <Link to="/contact" className="hover:text-purple-400 transition-colors">Contact</Link>
+          </div>
+          <p className="text-gray-600 text-sm">
+            © {new Date().getFullYear()} M Vivekananda. Built with React, Tailwind & Gemini API.
+          </p>
+        </footer>
+
+        <AIChat />
+      </div>
+    </BrowserRouter>
   );
 }
 
