@@ -7,7 +7,7 @@ export const PORTFOLIO_DATA: ProfileData = {
   about: "I am a sophomore pursuing a B.Tech in Civil Engineering at the Indian Institute of Technology Kanpur, with a strong passion for Aerial Robotics, Robotics, and Machine Learning. I actively explore the integration of AI with hardware systems to create autonomous and intelligent robotic solutions.",
   socials: {
     linkedin: "https://www.linkedin.com/in/m-vivekananda-77b922284/",
-    github: "https://github.com",
+    github: "https://github.com/CODER-7777",
     email: ["vivekanandamansoju@gmail.com", "mvivek24@iitk.ac.in"],
     phone: "+91 8333831294"
   },
