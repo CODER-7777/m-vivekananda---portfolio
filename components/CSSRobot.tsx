@@ -62,22 +62,28 @@ export const CSSRobot: React.FC = () => {
                         {/* Left Eye */}
                         <div className="w-16 h-16 bg-cyan-900/50 rounded-full relative flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
                             <motion.div
-                                className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_20px_#22d3ee]"
+                                className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_20px_#22d3ee] flex items-center justify-center"
                                 animate={{ x: pupilPos.x, y: pupilPos.y }}
                                 transition={{ type: "spring", stiffness: 150, damping: 15 }}
                             >
-                                <div className="absolute top-2 right-2 w-3 h-3 bg-white rounded-full opacity-80" />
+                                <motion.div
+                                    className="w-3 h-3 bg-white rounded-full opacity-80"
+                                    animate={{ x: pupilPos.x * 0.5, y: pupilPos.y * 0.5 }}
+                                />
                             </motion.div>
                         </div>
 
                         {/* Right Eye */}
                         <div className="w-16 h-16 bg-cyan-900/50 rounded-full relative flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
                             <motion.div
-                                className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_20px_#22d3ee]"
+                                className="w-10 h-10 bg-cyan-400 rounded-full shadow-[0_0_20px_#22d3ee] flex items-center justify-center"
                                 animate={{ x: pupilPos.x, y: pupilPos.y }}
                                 transition={{ type: "spring", stiffness: 150, damping: 15 }}
                             >
-                                <div className="absolute top-2 right-2 w-3 h-3 bg-white rounded-full opacity-80" />
+                                <motion.div
+                                    className="w-3 h-3 bg-white rounded-full opacity-80"
+                                    animate={{ x: pupilPos.x * 0.5, y: pupilPos.y * 0.5 }}
+                                />
                             </motion.div>
                         </div>
                     </div>
