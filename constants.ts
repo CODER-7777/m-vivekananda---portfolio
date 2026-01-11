@@ -150,8 +150,8 @@ export const PORTFOLIO_DATA: ProfileData = {
     }
   ],
   certifications: [
-    { name: "IIT Kanpur Certificate Program on AI and ML", link: "https://drive.google.com/drive/u/0/" },
-    { name: "Content Creation Internship – Set2Score", link: "https://drive.google.com/drive/u/0/" }
+    { name: "IIT Kanpur Certificate Program on AI and ML", link: "https://drive.google.com/drive/u/0/folders/1Fz0MMkRJukWd6Ud_wGeFK-nBohbvec-5" },
+    { name: "Content Creation Internship – Set2Score", link: "https://drive.google.com/drive/u/0/folders/1Fz0MMkRJukWd6Ud_wGeFK-nBohbvec-5" }
   ],
   artwork: [
     // --- PLACEHOLDER 1 ---
