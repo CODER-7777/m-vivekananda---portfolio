@@ -17,7 +17,7 @@ export const PORTFOLIO_DATA: ProfileData = {
       degree: "B.Tech in Civil Engineering",
       institution: "Indian Institute of Technology Kanpur",
       period: "2024 - 2028",
-      score: "CGPA: 7.9 (Till 2nd Sem)",
+      // score: "CGPA: 7.9 (Till 2nd Sem)", // Hidden as requested
       board: "IITK"
     },
     {

@@ -12,7 +12,7 @@ export interface Education {
   degree: string;
   institution: string;
   period: string;
-  score: string;
+  score?: string;
   board?: string;
 }
 
