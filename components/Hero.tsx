@@ -12,90 +12,90 @@ const TYPING_TEXTS = [
 
 // Main Drone Animation
 const DroneAnimation = () => (
-    <motion.div
-        className="absolute top-1/4 right-[15%] w-32 h-32 md:w-48 md:h-48 opacity-20 md:opacity-40 pointer-events-none z-0"
-        animate={{
-            y: [0, -20, 0],
-            rotate: [0, 5, -5, 0],
-        }}
-        transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-        }}
-    >
-        {/* Central Body */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-violet-500/20 rounded-full border border-violet-400 shadow-[0_0_20px_rgba(124,58,237,0.5)]">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-cyan-400 rounded-full animate-pulse" />
-        </div>
-        {/* Arms */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-1 bg-violet-500/30 rotate-45" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-1 bg-violet-500/30 -rotate-45" />
-        
-        {/* Rotors */}
-        {[
-            "top-0 left-0",
-            "top-0 right-0",
-            "bottom-0 left-0",
-            "bottom-0 right-0"
-        ].map((pos, i) => (
-            <motion.div
-                key={i}
-                className={`absolute ${pos} w-16 h-16 border-2 border-dashed border-cyan-500/30 rounded-full`}
-                animate={{ rotate: 360 }}
-                transition={{ duration: 0.5, repeat: Infinity, ease: "linear" }}
-            />
-        ))}
-    </motion.div>
+  <motion.div
+    className="absolute top-1/4 right-[15%] w-32 h-32 md:w-48 md:h-48 opacity-20 md:opacity-40 pointer-events-none z-0"
+    animate={{
+      y: [0, -20, 0],
+      rotate: [0, 5, -5, 0],
+    }}
+    transition={{
+      duration: 6,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }}
+  >
+    {/* Central Body */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-violet-500/20 rounded-full border border-violet-400 shadow-[0_0_20px_rgba(124,58,237,0.5)]">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-cyan-400 rounded-full animate-pulse" />
+    </div>
+    {/* Arms */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-1 bg-violet-500/30 rotate-45" />
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-1 bg-violet-500/30 -rotate-45" />
+
+    {/* Rotors */}
+    {[
+      "top-0 left-0",
+      "top-0 right-0",
+      "bottom-0 left-0",
+      "bottom-0 right-0"
+    ].map((pos, i) => (
+      <motion.div
+        key={i}
+        className={`absolute ${pos} w-16 h-16 border-2 border-dashed border-cyan-500/30 rounded-full`}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 0.5, repeat: Infinity, ease: "linear" }}
+      />
+    ))}
+  </motion.div>
 );
 
 // Secondary "Scanner Bot" Animation
 const ScannerBot = () => (
-    <motion.div 
-        className="absolute bottom-1/3 left-[10%] w-16 h-16 pointer-events-none z-0 hidden md:block"
-        animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-        }}
-        transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-        }}
+  <motion.div
+    className="absolute bottom-1/3 left-[10%] w-16 h-16 pointer-events-none z-0 hidden md:block"
+    animate={{
+      x: [0, 100, 0],
+      y: [0, -50, 0],
+    }}
+    transition={{
+      duration: 20,
+      repeat: Infinity,
+      ease: "linear"
+    }}
+  >
+    <motion.div
+      animate={{ rotate: -360 }}
+      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      className="w-full h-full border border-cyan-500/30 rounded-full flex items-center justify-center relative"
     >
-         <motion.div 
-            animate={{ rotate: -360 }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            className="w-full h-full border border-cyan-500/30 rounded-full flex items-center justify-center relative"
-         >
-            <div className="w-8 h-8 bg-cyan-900/40 rounded-full border border-cyan-500/50" />
-            <div className="absolute -top-1 w-2 h-2 bg-violet-500 rounded-full shadow-[0_0_10px_#7c3aed]" />
-         </motion.div>
+      <div className="w-8 h-8 bg-cyan-900/40 rounded-full border border-cyan-500/50" />
+      <div className="absolute -top-1 w-2 h-2 bg-violet-500 rounded-full shadow-[0_0_10px_#7c3aed]" />
     </motion.div>
+  </motion.div>
 );
 
 const HUDOverlay = () => (
-    <div className="absolute inset-0 pointer-events-none z-0">
-        {/* Scanning Line */}
-        <motion.div
-            className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent opacity-20"
-            animate={{ top: ["0%", "100%"] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        />
-        
-        {/* Corner Brackets */}
-        <div className="absolute top-10 left-10 w-20 h-20 border-t-2 border-l-2 border-violet-500/20 rounded-tl-3xl" />
-        <div className="absolute bottom-10 right-10 w-20 h-20 border-b-2 border-r-2 border-cyan-500/20 rounded-br-3xl" />
-        
-        {/* Random Floating Hexagons */}
-        <motion.div 
-            className="absolute top-1/3 left-10 text-violet-500/10 text-6xl"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        >
-            ⬡
-        </motion.div>
-    </div>
+  <div className="absolute inset-0 pointer-events-none z-0">
+    {/* Scanning Line */}
+    <motion.div
+      className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent opacity-20"
+      animate={{ top: ["0%", "100%"] }}
+      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+    />
+
+    {/* Corner Brackets */}
+    <div className="absolute top-10 left-10 w-20 h-20 border-t-2 border-l-2 border-violet-500/20 rounded-tl-3xl" />
+    <div className="absolute bottom-10 right-10 w-20 h-20 border-b-2 border-r-2 border-cyan-500/20 rounded-br-3xl" />
+
+    {/* Random Floating Hexagons */}
+    <motion.div
+      className="absolute top-1/3 left-10 text-violet-500/10 text-6xl"
+      animate={{ rotate: 360 }}
+      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+    >
+      ⬡
+    </motion.div>
+  </div>
 );
 
 export const Hero: React.FC = () => {
@@ -166,15 +166,8 @@ export const Hero: React.FC = () => {
 
       <div className="container mx-auto px-6 z-10 relative">
         <div className="flex flex-col items-center text-center">
-          
-          <motion.h2
-             initial={{ opacity: 0, y: 20 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ delay: 0.2 }}
-             className="text-cyan-400 font-medium tracking-[0.5em] mb-4 uppercase text-sm md:text-base border-b border-cyan-500/30 pb-2"
-          >
-            Portfolio Protocol V2.0
-          </motion.h2>
+
+
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -213,20 +206,20 @@ export const Hero: React.FC = () => {
             className="flex gap-6 mb-16"
           >
             {[
-                { link: PORTFOLIO_DATA.socials.github, Icon: Github },
-                { link: PORTFOLIO_DATA.socials.linkedin, Icon: Linkedin },
-                { link: `mailto:${PORTFOLIO_DATA.socials.email}`, Icon: Mail }
+              { link: PORTFOLIO_DATA.socials.github, Icon: Github },
+              { link: PORTFOLIO_DATA.socials.linkedin, Icon: Linkedin },
+              { link: `mailto:${PORTFOLIO_DATA.socials.email}`, Icon: Mail }
             ].map((social, i) => (
-                <a 
-                    key={i}
-                    href={social.link} 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="group p-4 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition-all border border-white/10 relative overflow-hidden shadow-[0_0_15px_rgba(124,58,237,0.1)] hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]"
-                >
-                    <social.Icon size={24} className="relative z-10 text-gray-300 group-hover:text-white transition-colors" />
-                    <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </a>
+              <a
+                key={i}
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+                className="group p-4 bg-white/5 rounded-full hover:bg-white/10 hover:scale-110 transition-all border border-white/10 relative overflow-hidden shadow-[0_0_15px_rgba(124,58,237,0.1)] hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]"
+              >
+                <social.Icon size={24} className="relative z-10 text-gray-300 group-hover:text-white transition-colors" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </a>
             ))}
           </motion.div>
 
