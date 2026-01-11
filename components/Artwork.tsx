@@ -21,8 +21,13 @@ export const Artwork: React.FC = () => {
                     viewport={{ once: true }}
                     className="flex items-center gap-4 mb-16"
                 >
-                    <div className="p-3 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-xl text-white shadow-lg shadow-violet-500/20">
-                        <Box size={32} />
+                    <div className="w-12 h-12 bg-white rounded-xl overflow-hidden shadow-lg shadow-violet-500/20">
+                        {/* Placeholder for Blender Icon - User to replace 'blender-icon.png' */}
+                        <img
+                            src="/blender-icon.png"
+                            alt="Blender"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                     <div>
                         <h2 className="text-4xl font-bold text-white">Blender Artwork</h2>

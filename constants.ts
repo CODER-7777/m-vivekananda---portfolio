@@ -151,7 +151,8 @@ export const PORTFOLIO_DATA: ProfileData = {
   ],
   certifications: [
     { name: "IIT Kanpur Certificate Program on AI and ML", link: "https://drive.google.com/file/d/1F44zBHNOvUMRRpk6Vyrek2ZEWjnQqBkT/view?usp=sharing" },
-    { name: "Content Creation Internship – Set2Score", link: "https://drive.google.com/file/d/1UcUfyO5hWxUvHabUbXs6K9j-uE3Ibekp/view?usp=sharing" }
+    { name: "Content Creation Internship – Set2Score", link: "https://drive.google.com/file/d/1UcUfyO5hWxUvHabUbXs6K9j-uE3Ibekp/view?usp=sharing" },
+    { name: "Supervised Machine Learning: Regression and Classification", link: "https://coursera.org/share/7d343a8f3c1fe5debaf6d5752ee5f8b0" },
   ],
   artwork: [
     // --- PLACEHOLDER 1 ---

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { BackgroundAnimation } from './components/BackgroundAnimation';
 import { CustomCursor } from './components/CustomCursor';
-import { AIChat } from './components/AIChat';
+
 import { Home } from './pages/Home';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
@@ -28,11 +28,11 @@ function App() {
             <Link to="/contact" className="hover:text-purple-400 transition-colors">Contact</Link>
           </div>
           <p className="text-gray-600 text-sm">
-            © {new Date().getFullYear()} M Vivekananda. Built with React, Tailwind & Gemini API.
+            © {new Date().getFullYear()} M Vivekananda. Built with React & Tailwind.
           </p>
         </footer>
 
-        <AIChat />
+
       </div>
     </BrowserRouter>
   );

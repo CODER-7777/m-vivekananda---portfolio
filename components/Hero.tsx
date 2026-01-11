@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../constants';
+import { CSSRobot } from './CSSRobot';
 
 const TYPING_TEXTS = [
   "Civil Engineer",
@@ -98,6 +99,46 @@ const HUDOverlay = () => (
   </div>
 );
 
+const HumanoidBackground: React.FC = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { innerWidth, innerHeight } = window;
+      const x = (e.clientX - innerWidth / 2) / 25; // Parallax strength
+      const y = (e.clientY - innerHeight / 2) / 25;
+      setMousePosition({ x, y });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  return (
+    <motion.div
+      className="absolute right-0 bottom-0 z-0 opacity-20 md:opacity-40 pointer-events-none select-none mix-blend-screen"
+      animate={{
+        x: mousePosition.x * -1, // Inverese movement for depth
+        y: mousePosition.y * -1
+      }}
+      transition={{ type: "spring", stiffness: 75, damping: 15 }}
+    >
+      <img
+        src="https://images.unsplash.com/photo-1546188994-03c14d934271?q=80&w=1974&auto=format&fit=crop"
+        alt="Humanoid Robot"
+        className="w-[800px] h-auto object-cover mask-image-gradient"
+        style={{
+          maskImage: 'linear-gradient(to top, black 50%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to top, black 50%, transparent 100%)'
+        }}
+      />
+      {/* Glowing Eyes Effect */}
+      <div className="absolute top-[30%] left-[45%] w-2 h-2 bg-cyan-400 rounded-full blur-[2px] shadow-[0_0_10px_#22d3ee]" />
+      <div className="absolute top-[30%] left-[55%] w-2 h-2 bg-cyan-400 rounded-full blur-[2px] shadow-[0_0_10px_#22d3ee]" />
+    </motion.div>
+  );
+};
+
 export const Hero: React.FC = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -162,11 +203,12 @@ export const Hero: React.FC = () => {
 
       <DroneAnimation />
       <ScannerBot />
+      {/* <HumanoidBackground /> */}
+      <CSSRobot />
       <HUDOverlay />
 
       <div className="container mx-auto px-6 z-10 relative">
         <div className="flex flex-col items-center text-center">
-
 
 
           <motion.h1
