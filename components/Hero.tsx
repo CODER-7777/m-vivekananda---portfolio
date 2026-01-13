@@ -14,7 +14,7 @@ const TYPING_TEXTS = [
 // Main Drone Animation
 const DroneAnimation = () => (
   <motion.div
-    className="absolute top-1/4 right-[15%] w-32 h-32 md:w-48 md:h-48 opacity-20 md:opacity-40 pointer-events-none z-0"
+    className="absolute top-1/4 left-[15%] w-32 h-32 md:w-48 md:h-48 opacity-20 md:opacity-40 pointer-events-none z-0"
     animate={{
       y: [0, -20, 0],
       rotate: [0, 5, -5, 0],
