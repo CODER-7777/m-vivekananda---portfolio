@@ -119,6 +119,7 @@ export const PORTFOLIO_DATA: ProfileData = {
     { name: "AutoCAD Inventor", level: 85, category: "Software/Tools" },
     { name: "Autodesk Fusion 360", level: 85, category: "Software/Tools" },
     { name: "Docker & Git", level: 80, category: "Software/Tools" },
+    { name: "ROS", level: 80, category: "Software/Tools" },
     { name: "Gazebo", level: 70, category: "Software/Tools" },
     { name: "Linux", level: 85, category: "Operating Systems" },
     { name: "Windows", level: 90, category: "Operating Systems" }
