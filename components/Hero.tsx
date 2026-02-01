@@ -6,9 +6,8 @@ import { CSSRobot } from './CSSRobot';
 
 const TYPING_TEXTS = [
   "Civil Engineer",
-  "Robotics Enthusiast",
-  "ML Practitioner",
-  "Autonomous Systems Builder"
+  "Drones & Robotics Enthusiast",
+  "ML Enthusiast",
 ];
 
 // Main Drone Animation
