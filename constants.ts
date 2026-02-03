@@ -53,6 +53,19 @@ export const PORTFOLIO_DATA: ProfileData = {
   ],
   projects: [
     {
+      id: "proj-eternal",
+      title: "Eternal - Fully Autonomous Warehouse Scanning Robot",
+      subtitle: "Inter IIT Tech Meet 14.0 (Gold Medal)",
+      period: "Nov 2025 – Dec 2025",
+      description: [
+        "Developed an autonomous robot for warehouse inventory management achieving 100% QR detection and <2cm localization accuracy using EKF sensor fusion.",
+        "Implemented SLAM mapping, obstacle-aware path planning, and MPC (ACADO Toolkit) for smooth trajectory tracking.",
+        "Fine-tuned YOLOv11 for QR detection and built a React-based HMI with detailed telemetry and Google Gemini voice control."
+      ],
+      techStack: ["ROS 2", "Python/C++", "SLAM/EqKF", "YOLOv11", "React", "Gemini API"],
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+    },
+    {
       id: "proj-1",
       title: "ACA253 - Movie Booking Platform",
       subtitle: "Personal Project, ACA Dept. of CSE",
