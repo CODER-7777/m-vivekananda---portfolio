@@ -1,0 +1,151 @@
+/* Theme Variables */
+:root {
+  --bg-primary: #050414;
+  --bg-secondary: #030014;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --accent-primary: #7c3aed;
+  --accent-secondary: #06b6d4;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f9fafb;
+  --bg-secondary: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --accent-primary: #7c3aed;
+  --accent-secondary: #06b6d4;
+}
+
+[data-theme="light"] .bg-\[#050414\],
+[data-theme="light"] .bg-\[#030014\],
+[data-theme="light"] .bg-\[#0a0a1a\],
+[data-theme="light"] .bg-\[#050510\] {
+  background-color: #ffffff !important;
+}
+
+[data-theme="light"] .text-white {
+  color: #111827 !important;
+}
+
+[data-theme="light"] .text-gray-300,
+[data-theme="light"] .text-gray-400 {
+  color: #6b7280 !important;
+}
+
+[data-theme="neon"] {
+  --bg-primary: #0a0014;
+  --bg-secondary: #000000;
+  --text-primary: #ff00ff;
+  --text-secondary: #00ffff;
+  --accent-primary: #ff00ff;
+  --accent-secondary: #00ffff;
+}
+
+[data-theme="neon"] .text-white {
+  color: #ff00ff !important;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+[data-theme="neon"] .text-gray-300,
+[data-theme="neon"] .text-gray-400 {
+  color: #00ffff !important;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+[data-theme="neon"] .border-white\/10,
+[data-theme="neon"] .border-white\/20 {
+  border-color: #ff00ff !important;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+[data-theme="cyberpunk"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #010409;
+  --text-primary: #00ff00;
+  --text-secondary: #ffff00;
+  --accent-primary: #00ff00;
+  --accent-secondary: #ffff00;
+}
+
+[data-theme="cyberpunk"] {
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,255,0,0.03) 2px,
+      rgba(0,255,0,0.03) 4px
+    );
+}
+
+[data-theme="cyberpunk"] .text-white {
+  color: #00ff00 !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+[data-theme="retro"] {
+  --bg-primary: #2d1b69;
+  --bg-secondary: #1a0f3d;
+  --text-primary: #ffd700;
+  --text-secondary: #ff69b4;
+  --accent-primary: #ffd700;
+  --accent-secondary: #ff69b4;
+}
+
+[data-theme="retro"] {
+  image-rendering: pixelated;
+  font-family: 'Press Start 2P', 'Courier New', monospace !important;
+}
+
+[data-theme="retro"] * {
+  border-radius: 0 !important;
+}
+
+[data-theme="retro"] .text-white {
+  color: #ffd700 !important;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+[data-theme="retro"] .bg-white\/5,
+[data-theme="retro"] .bg-white\/10 {
+  background-color: rgba(255, 215, 0, 0.1) !important;
+  border: 2px solid #ffd700 !important;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Neon text utility */
+.neon-text {
+  text-shadow: 0 0 10px var(--accent-primary);
+}
+
+/* Gradient border left utility */
+.gradient-border-l {
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary)) 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
