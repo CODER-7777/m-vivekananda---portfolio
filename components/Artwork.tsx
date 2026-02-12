@@ -24,7 +24,7 @@ export const Artwork: React.FC = () => {
                     <div className="w-12 h-12 bg-white rounded-xl overflow-hidden shadow-lg shadow-violet-500/20">
                         {/* Placeholder for Blender Icon - User to replace 'blender-icon.png' */}
                         <img
-                            src="/blender-icon.png"
+                            src="blender-icon.png"
                             alt="Blender"
                             className="w-full h-full object-cover"
                         />

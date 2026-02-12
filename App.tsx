@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { BackgroundAnimation } from './components/BackgroundAnimation';
 import { CustomCursor } from './components/CustomCursor';
 
@@ -9,7 +9,7 @@ import { Contact } from './pages/Contact';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="bg-[#050414] min-h-screen text-white selection:bg-pink-500 selection:text-white cursor-none overflow-x-hidden relative">
         <BackgroundAnimation />
         <CustomCursor />
@@ -34,7 +34,7 @@ function App() {
 
 
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

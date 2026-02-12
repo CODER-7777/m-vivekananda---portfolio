@@ -174,8 +174,8 @@ export const PORTFOLIO_DATA: ProfileData = {
       id: "art-1",
       title: "Security Drone",
       type: "video", // or "image"
-      url: "/artworks/video1.mp4", // Put file in public/artworks/video1.mp4
-      thumbnail: "/artworks/thumb1.png", // Optional: Put thumbnail in public/artworks/
+      url: "artworks/video1.mp4", // Put file in public/artworks/video1.mp4
+      thumbnail: "artworks/thumb1.png", // Optional: Put thumbnail in public/artworks/
       description: "A Futuristic Autonomous Security Drone"
     },
     /*
@@ -184,8 +184,8 @@ export const PORTFOLIO_DATA: ProfileData = {
       id: "art-2",
       title: "Forest Low poly scene",
       type: "video",
-      url: "/artworks/video2.mp4",
-      thumbnail: "/artworks/thumb2.png",
+      url: "artworks/video2.mp4",
+      thumbnail: "artworks/thumb2.png",
       description: "Low poly style forest scene"
     },
     // --- PLACEHOLDER 3 ---
@@ -193,8 +193,8 @@ export const PORTFOLIO_DATA: ProfileData = {
       id: "art-3",
       title: "Artwork Title 3",
       type: "video",
-      url: "/artworks/video3.mp4",
-      thumbnail: "/artworks/thumb3.jpg",
+      url: "artworks/video3.mp4",
+      thumbnail: "artworks/thumb3.jpg",
       description: "Description for artwork 3"
     },
     // --- PLACEHOLDER 4 ---
@@ -202,8 +202,8 @@ export const PORTFOLIO_DATA: ProfileData = {
       id: "art-4",
       title: "Artwork Title 4",
       type: "video",
-      url: "/artworks/video4.mp4",
-      thumbnail: "/artworks/thumb4.jpg",
+      url: "artworks/video4.mp4",
+      thumbnail: "artworks/thumb4.jpg",
       description: "Description for artwork 4"
     },
     // --- PLACEHOLDER 5 ---
@@ -211,8 +211,8 @@ export const PORTFOLIO_DATA: ProfileData = {
       id: "art-5",
       title: "Artwork Title 5",
       type: "video",
-      url: "/artworks/video5.mp4",
-      thumbnail: "/artworks/thumb5.jpg",
+      url: "artworks/video5.mp4",
+      thumbnail: "artworks/thumb5.jpg",
       description: "Description for artwork 5"
     },
     // --- PLACEHOLDER 6 ---
@@ -220,8 +220,8 @@ export const PORTFOLIO_DATA: ProfileData = {
       id: "art-6",
       title: "Artwork Title 6",
       type: "video",
-      url: "/artworks/video6.mp4",
-      thumbnail: "/artworks/thumb6.jpg",
+      url: "artworks/video6.mp4",
+      thumbnail: "artworks/thumb6.jpg",
       description: "Description for artwork 6"
     }
     */
