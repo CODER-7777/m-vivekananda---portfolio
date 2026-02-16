@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Palette, Moon, Sun, Zap, Monitor } from 'lucide-react';
+import { Palette, Moon, Zap, Monitor } from 'lucide-react';
 
-export type Theme = 'dark' | 'light' | 'neon' | 'cyberpunk' | 'retro';
+export type Theme = 'dark' | 'neon' | 'cyberpunk' | 'retro';
 
 interface ThemeSwitcherProps {
     onThemeChange?: (theme: Theme) => void;
@@ -35,7 +35,6 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ onThemeChange, val
 
     const themes = [
         { name: 'dark' as Theme, label: 'Dark', icon: Moon, color: 'bg-gray-900' },
-        { name: 'light' as Theme, label: 'Light', icon: Sun, color: 'bg-gray-100' },
         { name: 'neon' as Theme, label: 'Neon', icon: Zap, color: 'bg-pink-600' },
         { name: 'cyberpunk' as Theme, label: 'Cyberpunk', icon: Monitor, color: 'bg-cyan-600' },
         { name: 'retro' as Theme, label: 'Retro', icon: Palette, color: 'bg-yellow-600' },

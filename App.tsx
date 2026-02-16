@@ -52,7 +52,7 @@ function App() {
             <Link to="/contact" className="hover:text-purple-400 transition-colors">Contact</Link>
           </div>
           <p className="text-gray-600 text-sm">
-            © {new Date().getFullYear()} M Vivekananda. Built with React & Tailwind.
+            © {new Date().getFullYear()} M Vivekananda.All rights reserved.
           </p>
           <p className="text-gray-700 text-xs mt-2">
             Try Konami Code: ↑↑↓↓←→←→BA | Press Ctrl+` for Terminal
