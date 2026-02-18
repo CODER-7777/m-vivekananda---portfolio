@@ -56,7 +56,7 @@ export const KonamiCode: React.FC<KonamiCodeProps> = ({ onActivate }) => {
                         notification.className = 'fixed top-20 left-1/2 -translate-x-1/2 z-[9999] bg-gradient-to-r from-violet-600 to-cyan-600 text-white px-8 py-4 rounded-lg shadow-2xl animate-bounce';
                         notification.innerHTML = `
                             <div class="text-center">
-                              <div class="text-2xl font-bold mb-2">🎮 KONAMI CODE ACTIVATED! 🎮</div>
+                              <div class="text-2xl font-bold mb-2"> KONAMI CODE ACTIVATED! Less Gooo !! </div>
                               <div class="text-sm">Retro mode unlocked!</div>
                             </div>
                         `;

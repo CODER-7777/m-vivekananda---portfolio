@@ -19,7 +19,6 @@
     "framer-motion": "^12.23.25",
     "howler": "^2.2.4",
     "lucide-react": "^0.556.0",
-    "matter-js": "^0.20.0",
     "qrcode.react": "^4.2.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",

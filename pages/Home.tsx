@@ -3,7 +3,7 @@ import { Hero } from '../components/Hero';
 import { Timeline } from '../components/Timeline';
 import { Education } from '../components/Education';
 import { Projects } from '../components/Projects';
-import { PhysicsSkills } from '../components/PhysicsSkills';
+import { Skills } from '../components/Skills';
 import { Leadership } from '../components/Leadership';
 import { Artwork } from '../components/Artwork';
 import { GitHubStats } from '../components/GitHubStats';
@@ -25,7 +25,7 @@ export const Home: React.FC = () => {
             <Projects />
             <GitHubStats />
             <Artwork />
-            <PhysicsSkills />
+            <Skills />
             <Leadership />
         </>
     );
